@@ -12,6 +12,8 @@
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
+        - Hero
+        - Navigation
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment	
 --------------------------------------------------------------*/
@@ -23,6 +25,8 @@
 *,
 *:after,
 *:before {
+        font-family: 'Pacifico', cursive;
+        font-family: 'Roboto Slab', serif;
         -o-box-sizing: border-box;
         -ms-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -31,7 +35,8 @@
 }
 
 html {
-        /* ----- set font-size ----- */
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -50,11 +55,9 @@ html {
 -------------------------------------------------------------- */
 
 
-
-
 @media screen and (min-width: 768px) {
         html {
-
+                
         }
 }
 
@@ -252,6 +255,33 @@ html {
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+
+#layout > section:first-child,
+#benefits > div:first-child,
+header div:nth-child(2),
+header div:first-child {
+        text-align: center;
+}
+
+
+
+/* ----- HERO ----- */
+
+
+/* ----- NAVIGATION ----- */
+
+
+@media screen and (min-width: 768px) {
+        html {
+                
+        }
+}
+
+@media screen and (min-width: 1024px) {
+        html {
+
+        }
+}
 
 
 

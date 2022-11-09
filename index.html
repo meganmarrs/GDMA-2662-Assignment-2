@@ -3,19 +3,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<title> </title>
+<title>Atomic Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
+<script src="https://kit.fontawesome.com/5cc7a32d6a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div> <!--FIXED -->
             <div class="wrapper row">
-                <div class="col-lg-2"> <!--col classes-->
-                    <img src="" alt="ding">
+                <div class="col-sm-12 col-lg-2"> <!--DEFINE md-->
+                    <img src="img/logo-ding.jpg" alt="ding" width="160">
                 </div>
-                <nav class="col-lg-4"> <!--col classes-->
+                <nav class="col-sm-12 col-lg-4"> <!--DEFINE md-->
                     <ul>
                         <li><a href="#systems">Systems</a></li>
                         <li><a href="#layout">Layout</a></li>
@@ -26,8 +30,8 @@
             </div>
         </div>
 
-        <div class="col-lg-6"> <!--BG PINK, Border-Bottom -->
-            <div class=" wrapper"> <!--IMG, Text-Align center-->
+        <div class="wrapper col-sm-12 col-lg-6"> <!-- TEXT_ALIGN CENTER, DEFINE md, BG PINK, Border-Bottom -->
+            <div> <!--IMG-->
                 <h1>atomic design</h1>
                 <p>We're not designing pages, we're designing systems of components.</p>
             </div>
@@ -48,7 +52,7 @@
             <div class="row">
                 <section class="row col-sm-12 col-lg-4">
                     <div class="col-sm-2 col-lg-12">
-                        <span></span>
+                        <span class="fa-solid fa-atom"></span> 
                     </div>
                     <div class="col-sm-10 col-lg-12">
                         <header>
@@ -60,7 +64,7 @@
 
                 <section class="row col-sm-12 col-lg-4">
                     <div class=" col-sm-2 col-lg-12">
-                        <span></span>
+                        <span class="fa-solid fa-dna"></span> 
                     </div>
                     <div class=" col-sm-10 col-lg-12">
                         <header>
@@ -72,7 +76,7 @@
 
                 <section class="row col-sm-12 col-lg-4">
                     <div class="col-sm-2 col-lg-12">
-                        <span></span>
+                        <span class="fa-solid fa-bacteria"></span>
                     </div>
                     <div class=" col-sm-10 col-lg-12">
                         <header>
@@ -85,14 +89,14 @@
        </section>
 
        <div class="row" id="layout">
-            <section> <!--BG Pink BOX, Text-Align Center-->
+            <section class="col-lg-4"> <!--BG Pink BOX-->
                 <header>
                     <h2>why atomic design</h2>
                 </header>
                 <p>Atomic design provides a clear methodology for crafting design systems. Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. And by assembling rather than deconstructing, we're crafting a system right out of the gate instead of cherry picking patterns after the fact.</p>
             </section>
 
-            <section>
+            <section class="col-lg-8">
                 <header>
                     <h2>layout</h2>
                 </header>
@@ -116,8 +120,8 @@
             </section>
         </div>
 
-        <div class="col-lg-6"></div> <!--IMG, IMG gone on sm & md-->
-        <section class="col-sm-12 col-lg-6" id="testing"> <!--DEFINE md-->
+        <div class="col-lg-5"></div> <!--IMG, IMG gone on sm & md-->
+        <section class="col-sm-12 col-lg-7" id="testing"> <!--DEFINE md-->
             <header>
                 <h2>testing the system</h2>
             </header>
@@ -136,7 +140,7 @@
             <div class="row"> <!--SM:Text-Align Center-->
                 <section class="row col-sm-12 col-lg-6"> <!--DEFINE md-->
                     <div class="col-sm-12 col-lg-3"> <!--DEFINE md-->
-                        <span></span>
+                        <span class="fa-solid fa-pen-ruler"></span>
                     </div>
                     <div class="col-sm-12 col-lg-9"> <!--DEFINE md-->
                         <header>
@@ -149,11 +153,11 @@
 
                 <section class="row col-sm-12 col-lg-6"> <!--DEFINE md-->
                     <div class=" col-sm-12 col-lg-3"> <!--DEFINE md-->
-                        <span></span>
+                        <span class="fa-solid fa-code"></span>
                     </div>
                     <div class=" col-sm-12 col-lg-9"> <!--DEFINE md-->
                         <header>
-                            <h3>code</h3>
+                            <h3>code</h3> 
                         </header>
                         <p><b>Easy-to-read code that is more consistent</b> &ndash; The code of 'atomically' designed websites is typically much easier to read than one created a more traditional way. Consistency is given when you use predefined atoms in order to create the site layout. It makes it easy to see which components are being used for different parts of the site. This reduces the tendency of duplicate code on the site.</p>
                         <p><b>Faster Prototyping and updating</b> &ndash; By having a defined list of atoms before the creation process begins eventually means that you can mock-up pages quickly and easily. You simply pick and combine the required elements for the site. If an update is necessary, only one atom, molecule or organism is changed at a time. This simplifies any updates to a component that is carried out across to all other instances.</p>
@@ -175,7 +179,7 @@
             </nav>
             <div class="col-sm-12 col-lg-8"> <!--DEFINE md-->
                 <div>
-                    <img src="" alt="ding">
+                    <img src="img/logo-ding.jpg" alt="ding" width="160">
                 </div>
                 <h4>Atomic Design</h4>
                 <p>By Brad Frost</p>
