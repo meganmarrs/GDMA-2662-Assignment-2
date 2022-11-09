@@ -16,10 +16,10 @@
     <header>
         <div> <!--FIXED -->
             <div class="wrapper row">
-                <div class="col-sm-12 col-lg-2"> <!--DEFINE md-->
-                    <img src="img/logo-ding.jpg" alt="ding" width="160">
+                <div class="col-sm-12 col-lg-3"> <!--DEFINE md-->
+                    <img src="img/logo-ding.jpg" alt="ding" width="160"  data-rjs="2">
                 </div>
-                <nav class="col-sm-12 col-lg-4"> <!--DEFINE md-->
+                <nav class="col-sm-12 col-lg-9"> <!--DEFINE md-->
                     <ul>
                         <li><a href="#systems">Systems</a></li>
                         <li><a href="#layout">Layout</a></li>
@@ -31,13 +31,12 @@
         </div>
 
         <div>
-            <div class="wrapper col-sm-12 col-lg-6"> <!-- DEFINE md -->
-                <div></div> <!--IMG, HELP IS IT RIGHT?-->
-                <div> 
-                    <h1>atomic design</h1>
+            <section class="wrapper">
+                <h1>atomic design</h1>
+                <div>
                     <p>We're not designing pages, we're designing systems of components.</p>
                 </div>
-            </div>
+            </section>
         </div>
     </header>
 
@@ -92,14 +91,14 @@
        </section>
 
        <div class="row" id="layout">
-            <section class="col-lg-4"> <!--BG Pink BOX-->
+            <section class="col-sm-12 col-lg-4"> <!--BG Pink BOX-->
                 <header>
                     <h2>why atomic design</h2>
                 </header>
                 <p>Atomic design provides a clear methodology for crafting design systems. Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. And by assembling rather than deconstructing, we're crafting a system right out of the gate instead of cherry picking patterns after the fact.</p>
             </section>
 
-            <section class="col-lg-8">
+            <section class="col-sm-12 col-lg-8">
                 <header>
                     <h2>layout</h2>
                 </header>
@@ -123,17 +122,19 @@
             </section>
         </div>
 
-        <div class="col-lg-5"></div> <!--IMG, IMG gone on sm & md-->
-        <section class="col-sm-12 col-lg-7" id="testing"> <!--DEFINE md-->
-            <header>
-                <h2>testing the system</h2>
-            </header>
-            <p>The page stage is essential as it's where we test the effectiveness of the design system. Viewing everything in context allows us to loop back to modify our molecules, organisms, and templates to better address the real context of the design.</p>
-            <p>Pages are also the place to test variations in templates. For example, you might want to articulate what a headline containing 40 characters looks like, but also demonstrate what 340 characters looks like. What does it look like when a user has one item in their shopping cart versus 10 items with a discount code applied? Again, these specific instances influence how we loop back through and construct our system.</p>
-        </section>
+        <div class="row" id="testing">
+            <div class="col-lg-5"></div> <!--IMG gone on sm & md-->
+            <section class="col-sm-12 col-lg-7"> <!--DEFINE md-->
+                <header>
+                    <h2>testing the system</h2>
+                </header>
+                <p>The page stage is essential as it's where we test the effectiveness of the design system. Viewing everything in context allows us to loop back to modify our molecules, organisms, and templates to better address the real context of the design.</p>
+                <p>Pages are also the place to test variations in templates. For example, you might want to articulate what a headline containing 40 characters looks like, but also demonstrate what 340 characters looks like. What does it look like when a user has one item in their shopping cart versus 10 items with a discount code applied? Again, these specific instances influence how we loop back through and construct our system.</p>
+            </section>
+        </div>
 
         <section id="benefits">
-            <div class="row col-center"> <!--Text-Align Center-->
+            <div class="row col-center"> 
                 <header class="col-sm-12 col-lg-8"> <!--DEFINE md-->
                     <h2>benefits</h2>
                     <p>Atomic design can require considerably more thought and planning, but it's often worth the extra effort. So what are the main benefits of it?</p>
@@ -149,8 +150,8 @@
                         <header>
                             <h3>design</h3>
                         </header>
-                        <p><b>Building a component-based system</b> &ndash; When we are breaking down our components into basic atoms, it becomes easier to see what atoms can be combined or mixed and matched to form other molecules or organisms. It helps us to navigate between atomic parts and the whole of our UIs.</p>
-                        <p><b>Style guide creation becomes simple</b> &ndash; Applying the atomic design principles from the get-go, which means that all the atoms and molecules are created before the site is built, you can incorporate all your atoms and molecules into your style guide. This keeps your design consistent across platforms.</p>
+                        <p><b>Building a component-based system</b> &mdash; When we are breaking down our components into basic atoms, it becomes easier to see what atoms can be combined or mixed and matched to form other molecules or organisms. It helps us to navigate between atomic parts and the whole of our UIs.</p>
+                        <p><b>Style guide creation becomes simple</b> &mdash; Applying the atomic design principles from the get-go, which means that all the atoms and molecules are created before the site is built, you can incorporate all your atoms and molecules into your style guide. This keeps your design consistent across platforms.</p>
                     </div>
                 </section>
 
@@ -162,8 +163,8 @@
                         <header>
                             <h3>code</h3> 
                         </header>
-                        <p><b>Easy-to-read code that is more consistent</b> &ndash; The code of 'atomically' designed websites is typically much easier to read than one created a more traditional way. Consistency is given when you use predefined atoms in order to create the site layout. It makes it easy to see which components are being used for different parts of the site. This reduces the tendency of duplicate code on the site.</p>
-                        <p><b>Faster Prototyping and updating</b> &ndash; By having a defined list of atoms before the creation process begins eventually means that you can mock-up pages quickly and easily. You simply pick and combine the required elements for the site. If an update is necessary, only one atom, molecule or organism is changed at a time. This simplifies any updates to a component that is carried out across to all other instances.</p>
+                        <p><b>Easy-to-read code that is more consistent</b> &mdash; The code of 'atomically' designed websites is typically much easier to read than one created a more traditional way. Consistency is given when you use predefined atoms in order to create the site layout. It makes it easy to see which components are being used for different parts of the site. This reduces the tendency of duplicate code on the site.</p>
+                        <p><b>Faster Prototyping and updating</b> &mdash; By having a defined list of atoms before the creation process begins eventually means that you can mock-up pages quickly and easily. You simply pick and combine the required elements for the site. If an update is necessary, only one atom, molecule or organism is changed at a time. This simplifies any updates to a component that is carried out across to all other instances.</p>
                     </div>
                 </section>
            </div>
@@ -180,21 +181,13 @@
                     <li><a href="#benefits">Benefits</a></li>
                 </ul>
             </nav>
-            <div class="col-sm-12 col-lg-8"> <!--DEFINE md-->
-                <div>
-                    <img src="img/logo-ding.jpg" alt="ding" width="160">
-                </div>
+            <section class="col-sm-12 col-lg-8"> <!--DEFINE md-->
+                <img src="img/logo-ding.jpg" alt="ding" width="160"  data-rjs="2">
                 <h4>Atomic Design</h4>
-                <p>By Brad Frost</p>
-            </div>
+                <p><a href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank">By Brad Frost</a></p>
+            </section>
         </div>
     </footer>
-
-
-
-
-    
-    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/functions.js"></script>
