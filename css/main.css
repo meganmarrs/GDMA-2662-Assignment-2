@@ -14,6 +14,7 @@
 6.0 - Components: specific designed components
         - Hero
         - Navigation
+        - Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment	
 --------------------------------------------------------------*/
@@ -264,13 +265,6 @@ header div:first-child {
 }
 
 
-
-/* ----- HERO ----- */
-
-
-/* ----- NAVIGATION ----- */
-
-
 @media screen and (min-width: 768px) {
         html {
                 
@@ -282,6 +276,36 @@ header div:first-child {
 
         }
 }
+
+
+/* ----- HERO ----- */
+header > div:nth-child(2),
+#layout > section:first-child {
+        background-color: pink;
+}
+
+
+/* ----- NAVIGATION ----- */
+a,
+li {
+        text-decoration: none;
+        list-style-type: none;
+}
+
+header li {
+        display: inline-block;
+}
+
+header > div:first-child {
+        border-bottom: 3px pink solid;
+}
+
+
+/* ----- FOOTER ----- */
+footer {
+        border-top: 5px pink solid;
+}
+
 
 
 
