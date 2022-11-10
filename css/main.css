@@ -45,39 +45,59 @@ nav {
 html {
         font: 1rem 'Roboto Slab', serif;
         line-height: 2em;
+        color: #00515D;
 }
 
 @media screen and (min-width: 768px) {
-        html {
-
-        }
+        
 }
 
 @media screen and (min-width: 1024px) {
-        html {
-
-        }
+        
 }
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 /* ----- TYPOGRAPHY ----- */ 
 
-span {
-        font-size: 2rem;
-
+h1,
+h2,
+h3,
+nav a {
+        color: #00B0A3;;
 }
 
+h2,
+span {
+        font-size: 2rem;
+}
+
+h1 {
+        font-size: 3.5rem;
+        margin-bottom: .75em;
+}
+
+h1 + div p {
+        line-height: 2em;
+}
+
+h2 {
+        margin: 0.25em 0;
+}
+
+h3 {
+        margin: 0;
+}
+
+
+
 @media screen and (min-width: 768px) {
-        html {
-                
-        }
+        /* ----- TYPOGRAPHY ----- */ 
 }
 
 @media screen and (min-width: 1024px) {
-        html {
-
-        }
+        /* ----- TYPOGRAPHY ----- */ 
+        
 }
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -271,11 +291,25 @@ span {
 
 #layout > section:first-child,
 #benefits > div:first-child,
+#benefits div:last-child,
+#benefits div:last-child section div:first-child,
 header div:nth-child(2),
 header div:first-child,
 footer {
         text-align: center;
 }
+
+#layout section:last-child p,
+#benefits div:last-child header + p,
+#systems div:last-child p {
+        margin: 0;
+}
+
+#systems div:last-child div:first-child,
+#systems div:last-child div:last-child {
+        padding: 0;
+}
+
 
 #testing div:first-child {
         background: url("../img/balloon-rainbow.jpg") no-repeat;
@@ -286,29 +320,19 @@ footer {
         background-size: contain;
 }
 
-
-
-@media screen and (min-width: 768px) {
-        html {
-                
-        }
+#systems div:nth-child(2) section:nth-child(2) {
+        display: flex;
+        align-content: flex-start;
 }
 
-@media screen and (min-width: 1024px) {
-        header nav {
-                text-align: right;
-        }
 
-        header .row > div {
-                text-align: left;
-        }
-}
 
 
 /* ----- HERO ----- */
 header > div:nth-child(2),
 #layout > section:first-child {
-        background-color: pink;
+        background-color: #FFD8DB;
+        padding: 0 .75rem;
 }
 
 header div:last-child h1 + div {
@@ -335,12 +359,20 @@ li {
         list-style-type: none;
 }
 
+header a {
+        margin-left: 1.5rem;
+}
+
+footer li {
+        margin-top: .5em;
+}
+
 header li {
         display: inline-block;
 }
 
 header > div:first-child {
-        border-bottom: 3px pink solid;
+        border-bottom: 3px #FFD8DB solid;
 }
 
 ul {
@@ -350,12 +382,80 @@ ul {
 
 
 /* ----- FOOTER ----- */
+footer p,
+h4 {
+        margin: 0;
+}
+
 footer {
-        border-top: 5px pink solid;
+        border-top: 5px #FFD8DB solid;
 }
 
 
 
+@media screen and (min-width: 768px) {
+        /* #systems div:first-child div,
+        #layout section:last-child div:first-child,
+        #testing section {
+                text-align: center;
+        }
+
+        #benefits div:last-child,
+        #benefits div:last-child section div:first-child {
+                text-align: left;
+        }
+
+        /* ----- NAVIGATION ----- */
+        nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-content: center;
+        }    
+               */
+}
+
+@media screen and (min-width: 1024px) {
+        #systems div:first-child div,
+        #systems div:last-child {
+                text-align: center;
+        }
+
+        #layout section:first-child {
+                flex-direction: column;
+                justify-content: center;
+                order: 1;
+        }
+
+        #benefits div:last-child {
+                text-align: left;
+        }
+
+         
+/* ----- NAVIGATION ----- */
+        header nav {
+                text-align: right;
+        }
+
+        header .row > div {
+                text-align: left;
+        }
+
+        nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-content: center;
+        }
+
+/* ----- FOOTER ----- */
+        footer nav {
+                flex-direction: column;
+                justify-content: center;
+                order: 1;
+}
+
+}
 /*--------------------------------------------------------------
     7.0 - UTILIY
 -------------------------------------------------------------- */
