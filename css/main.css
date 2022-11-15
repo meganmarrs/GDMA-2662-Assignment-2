@@ -33,15 +33,6 @@
         box-sizing: border-box;
 }
 
-h1,
-h2 {
-        font-family: 'Pacifico', cursive;
-}
-
-nav {
-        font-family: 'Open Sans', sans-serif;
-}
-
 html {
         font: 1rem 'Roboto Slab', serif;
         line-height: 2em;
@@ -58,8 +49,6 @@ html {
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
-/* ----- TYPOGRAPHY ----- */ 
-
 h1,
 h2,
 h3,
@@ -67,17 +56,29 @@ nav a {
         color: #00B0A3;;
 }
 
+h1,
+h2 {
+        font-family: 'Pacifico', cursive;
+}
+
+h4,
+footer p{
+        margin: 0;
+}
+/* ----- TYPOGRAPHY ----- */ 
+
 h2 {
         font-size: 2rem;
 }
 
 h1 {
         font-size: 3.5rem;
-        margin-bottom: 0.75em;
+        margin-bottom: 0;
 }
 
 h1 + div p {
         line-height: 2em;
+        margin-top: 1.5em;
 }
 
 h2 {
@@ -304,10 +305,8 @@ span {
 -------------------------------------------------------------- */
 
 #layout > section:first-child,
-#benefits > div:first-child,
-#benefits div:last-child,
-header div:nth-child(2),
-header div:first-child,
+#benefits,
+header div,
 footer {
         text-align: center;
 }
@@ -323,13 +322,39 @@ footer {
         padding: 0;
 }
 
-#systems div:nth-child(2) section:nth-child(2) {
-        display: flex;
-        align-content: flex-start;
+#layout,
+#testing,
+#benefits {
+        padding-top: 4em;
 }
 
-#benefits div:last-child > section div:first-child {
-        text-align: center;
+header > div:nth-child(2),
+#layout > section:first-child {
+        background-color: #FFD8DB;
+        padding: 0 .75rem;
+}
+
+nav a,
+li {
+        text-decoration: none;
+        list-style-type: none;
+}
+
+footer section img,
+footer section p {
+        margin-right: 0.75rem;
+}
+
+#systems {
+        padding-top: 2em;
+}
+
+#benefits {
+        padding-bottom: 2.5em;
+}
+
+#systems section {
+        align-content: flex-start;
 }
 
 #layout section:first-child {
@@ -338,28 +363,7 @@ footer {
 
 
 
-/* ----- SPACING ----- */
-
-#systems {
-        padding-top: 2em;
-}
-
-#layout,
-#testing,
-#benefits {
-        padding-top: 4em;
-}
-
-#benefits {
-        padding-bottom: 2.5em;
-}
-
 /* ----- HERO ----- */
-header > div:nth-child(2),
-#layout > section:first-child {
-        background-color: #FFD8DB;
-        padding: 0 .75rem;
-}
 
 header > div:nth-child(2) {
         margin-top: 7em;
@@ -384,11 +388,22 @@ header div:last-child section {
         padding: 4em 0;     
 }
 
+header > div:first-child {
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+
+header div:first-child {
+        padding: 0.25rem;
+}
+
 /* ----- NAVIGATION ----- */
-nav a,
-li {
-        text-decoration: none;
-        list-style-type: none;
+
+nav {
+        font-family: 'Open Sans', sans-serif;
 }
 
 nav a:hover {
@@ -398,20 +413,8 @@ nav a:hover {
         border-radius: 1em;
 }
 
-header > div:first-child {
-        background-color: #fff;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-}
-
 header a {
         margin-left: 1.5rem;
-}
-
-footer nav.row {
-        justify-content: center;
 }
 
 footer li {
@@ -427,10 +430,6 @@ header > div:first-child {
         
 }
 
-header div:first-child {
-        padding: 0.25rem;
-}
-
 ul {
         padding-left: 0;
         margin: 0;
@@ -438,21 +437,10 @@ ul {
 
 
 /* ----- FOOTER ----- */
-footer p,
-h4 {
-        margin: 0;
-}
 
 footer {
         border-top: 5px #FFD8DB solid;
 }
-
-footer section img,
-footer section p {
-        margin-right: 0.75rem;
-}
-
-
 
 
 @media screen and (min-width: 768px) {
@@ -463,9 +451,16 @@ footer section p {
         }
 
         #benefits div:last-child,
-        #benefits div:last-child section div:first-child {
+        #benefits div:last-child section div:first-child,
+        #layout section:last-child > div:first-child {
                 text-align: left;
         }
+
+        #layout section:last-child section:first-of-type {
+                margin: 0;
+        }
+
+        
 
 
 /* ----- HERO ----- */
@@ -484,19 +479,27 @@ footer section p {
 
 @media screen and (min-width: 1024px) {
         #systems div:first-child div,
-        #systems div:last-child {
+        #systems div:last-child,
+        header .row {
                 text-align: center;
         }
 
         #benefits div:last-child,
         #testing section,
-        #layout section:last-child div:first-child {
+        #layout section:last-child div:first-child,
+        header .row > div,
+        footer > div {
                 text-align: left;
         }
 
-        #benefits div:last-child > section div:first-child {
+        #benefits div:last-child > section div:first-child,
+        header nav {
                 text-align: right;
         }
+
+        header div:first-child div div,
+        footer section {
+                margin: 1em 0; }
 
         #layout section:first-child {
                 flex-direction: column;
@@ -523,31 +526,12 @@ footer section p {
         }
     
 /* ----- NAVIGATION ----- */
-        header nav {
-                text-align: right;
-        }
-
-        header .row > div {
-                text-align: left;
-        }
-
-        header .row {
-                align-items: center;
-        }
 
         nav {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-end;
                 align-content: center;
-        }
-
-        header div:first-child div div,
-        footer section {
-                margin: 1em 0; }
-
-        footer nav.row {
-                justify-content: left;
         }
 
 /* ----- HERO ----- */
@@ -565,7 +549,6 @@ footer section p {
         footer > div {
                 justify-content: flex-start;
                 align-items: center;
-                text-align: left;
         }
 
 }
